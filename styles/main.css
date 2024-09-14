@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #191919;
+  --body: #5C5C5C;
+}
+
+body {
+  background-color: var(--body);
+
+  main {
+    width: 70%;
+    margin: auto;
+  
+    .main-section {
+        width: 70%;
+        height: auto;
+        margin: auto;
+        margin-top: 3rem;
+        border: 3px solid #F5F5F5;
+        border-radius: 20px;
+        background-color: #ADADAD;
+        padding: 3rem;
+        font-family: "Cousine";
+        font-size: 18px;
+
+        .password-response-container {
+
+          .password-response {
+            background-color: #F5F5F5;
+            border: 2px solid #191919;
+            border-radius: 20px;
+            padding: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+          
+          .checkboxes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+
+              div {
+                width: 35%;
+                padding: 1rem;
+              }
+          }
+
+          .generate-btn {
+            button {
+              width: 10%;
+              height: 45px;
+              background-color: #191919;
+              color: #F5F5F5;
+              font-size: 18px;
+              border: 3px solid #F5F5F5;
+              border-radius: 20px;
+              cursor: pointer;
+            }
+
+            button:hover {
+              border: 3px solid #191919;
+              background-color: #F5F5F5;
+              color: #191919;
+              font-size: 18px;
+            }
+          }
+      }
+  
+  }
+
+  header {
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      width: 100vw;
+      height: 150px;
+      background-color: var(--background);
+      color: white;
+      letter-spacing: 1.2px;
+      font-family: "Pathway Gothic One";
+    }
+  }
+}
+
+
+

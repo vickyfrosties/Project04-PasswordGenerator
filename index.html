@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <script defer src="./script/script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Password Generator</h1>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="main-section">
+      <div class="password-response-container">
+         <div id="result" class="password-response">
+           Generated Password
+         </div>
+      </div>
+     
+
+      <div class="checkboxes">
+        <div>
+            <input type="checkbox">
+            <label for="maj">Upper Case</label>
+        </div>
+      
+        <div>
+          <input type="checkbox">
+          <label for="min">Lower Case</label>
+        </div>
+
+        <div>
+            <input type="checkbox">
+            <label for="symbols">Symbols</label>
+        </div>
+       
+        <div>
+            <input type="checkbox">
+            <label for="number">Number</label>
+        </div>
+      
+      </div>
+
+      <div class="generate-btn">
+        <button id="randomize">Generate</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
