@@ -97,22 +97,31 @@ const MY_CHARACTERS = [
 
 const COPY_BTN = document.getElementById("copyBTN");
 const GENERATE_BTN = document.getElementById("randomize");
+const UP_CASE = document.getElementById("upcase");
+const LO_CASE = document.getElementById("locase");
+const SYMBOLS = document.getElementById("symbols");
+const NUMBERS = document.getElementById("numbers");
 
 GENERATE_BTN.addEventListener("click", () => {
   const RESULT = document.getElementById("result");
   let randomizedPwd = "";
   let pwdLength = 15;
 
-  for (let i = 0; i < pwdLength; i++) {
-    const RANDOMIZED_PWD = MY_CHARACTERS[Math.floor(Math.random() * MY_CHARACTERS.length)];
-    RESULT.textContent = randomizedPwd += RANDOMIZED_PWD;
-    COPY_BTN.setAttribute("data-clipboard-text", randomizedPwd);
+  if(UP_CASE.checked && LO_CASE.checked && SYMBOLS.checked && NUMBERS.checked) {
+    for (let i = 0; i < pwdLength; i++) {
+      const RANDOMIZED_PWD = MY_CHARACTERS[Math.floor(Math.random() * MY_CHARACTERS.length)];
+      RESULT.textContent = randomizedPwd += RANDOMIZED_PWD;
+      COPY_BTN.setAttribute("data-clipboard-text", randomizedPwd);
+    }
+  }
+
+  else if (!UP_CASE.checked && LO_CASE.checked && SYMBOLS.checked && NUMBERS.checked) {
+    console.log("There's no CAPITAL CASE here")
   }
 
   let clipboard = new ClipboardJS(".btn");
 
   clipboard.on("success", function (e) {
-    console.info("Password copied to clipboard ! :", e.text);
     RESULT.innerText = "Password copied to clipboard !";
 
     setTimeout(() => {
