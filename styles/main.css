@@ -9,9 +9,25 @@
   --body: #5c5c5c;
 }
 
+
 body {
   background-color: var(--body);
   height: 100vh;
+  
+  header {
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      width: 100vw;
+      height: 150px;
+      background-color: var(--background);
+      color: white;
+      letter-spacing: 1.2px;
+      font-family: "Pathway Gothic One";
+    }
+  }
 
   main {
     width: 70%;
@@ -41,10 +57,17 @@ body {
         }
 
         .btn {
+          border: 2px solid var(--background);
+          border-radius: 20px;
+          width: 70px;
+          height: 40px;
+          cursor: pointer;
+          margin-top: 10px;
+
           /* display: none; */
 
           img {
-            width: 20px;
+            width: 15px;
           }
         }
       }
@@ -83,18 +106,5 @@ body {
     }
   }
 
-  header {
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 35px;
-      width: 100vw;
-      height: 150px;
-      background-color: var(--background);
-      color: white;
-      letter-spacing: 1.2px;
-      font-family: "Pathway Gothic One";
-    }
-  }
+
 }
